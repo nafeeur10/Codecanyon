@@ -1,0 +1,47 @@
+/* 
+This stylesheet only for Body Content. Not for menu.
+So you can skip it when you will use this code.
+*/
+
+body {
+	background: linear-gradient(-45deg, #eeca52, #ec3a7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.hr {
+    border: 0;
+    clear:both;
+    display:block;
+    width: 96%;               
+    background-color:#FFFF00;
+    height: 1px;
+}
+
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: black;
+    color: white;
+}
+
+@media (min-width: 300px) and (max-width: 768px) {
+	.display-sm-3 {
+		font-size: 1.75rem!important;
+		font-weight: 700!important;
+		margin-bottom: 10px!important;
+	}
+}
+

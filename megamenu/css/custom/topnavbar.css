@@ -1,0 +1,79 @@
+/* Top Navbar CSS here */
+
+.bacground_color_of_top_nav {
+    background-color: #FAFAFA;
+    z-index: -9;
+}
+
+.dropdown-menu-transition {
+    display: block;
+    max-height: 0;
+    visibility: hidden;
+    transition: all 0.2s ease-in-out;
+    overflow: hidden;
+}
+
+.dropdown-language-div {
+    left: 2px!important;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin: 0;
+    z-index: 9;
+    top: -1px!important;
+}
+
+.countrySelectLabel {
+    font-size: 1.2vw;
+    font-weight: 700;
+    color: #000;
+}
+
+
+.currencySelectLabel {
+    font-size: 1.2vw;
+    font-weight: 700;
+    color: #000;
+}
+
+
+.dropdown-language-currency:hover {
+    background-color: unset!important;
+}
+
+.dropdown-language-currency:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: unset!important;
+}
+
+
+.nav-pills .show > .nav-link {
+    background-color: white!important;
+    z-index: 99999;
+    position: relative;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: unset!important;
+    box-shadow: 0px -1px 0px 1px rgba(217, 217, 255, 1);
+    -moz-box-shadow: 0px -1px 0px 1px rgba(217, 217, 255, 1);
+    -webkit-box-shadow: 0px -1px 0px 1px rgba(217, 217, 255, 1);
+    border: 0px solid #e8e8e8;
+    border-top: 0!important;
+}
+
+.show > .dropdown-menu-transition {
+    max-height: 900px;
+    visibility: visible;
+    overflow: hidden;
+    z-index: 1030;
+} 
+
+.select2-selection__rendered {
+    line-height: 31px !important;
+}
+.select2-container .select2-selection--single {
+    height: 35px !important;
+}
+.select2-selection__arrow {
+    height: 34px !important;
+}

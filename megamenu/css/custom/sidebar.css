@@ -1,0 +1,157 @@
+/* Sidebar CSS Code Here */
+
+
+/* 
+    Category-sidebar class will maintain height and width of Sidebar.
+    While sidebar will open, other elements will be disappear under it. z-index will do it.
+*/
+.category-sidebar
+{
+    height:100%;
+    width: 282px;
+    background-color: transparent;
+    position:fixed!important;
+    z-index: 9999;
+    overflow:auto;
+}
+
+.button {
+    background-image: linear-gradient(to top, rgba(240, 236, 236, 0.03), rgba(255,255,255,.03));
+    font-size: 16px;
+    font-weight: 300;
+    position: relative;
+    border-top: 1px solid rgba(56,56,56,0.2);
+    transition: all 0.17s ease-in-out;
+    -moz-transition: all 0.17s ease-in-out;
+    padding: 10px 15px!important;
+    /* background-color: rgba(0,122,255, 0.9); */
+    -webkit-transition: all 0.17s ease-in-out;
+    /* background-image: linear-gradient(45deg,#44b87e,#3a7bbd); */
+    background-repeat: repeat-x;
+    color: #000!important;
+    /* box-shadow: 2px 2px 4px -1px rgba(0, 0, 0, 0.1), 2px 1px 2px 1px rgba(0, 0, 0, 0.11); */
+    cursor: pointer;
+    transition: all ease-in-out 300ms;
+    border-radius: 0!important;
+}
+
+.fa-plus {
+    font-size: 12px!important;
+}
+
+.fa-inverse {
+    font-size: 12px!important;
+}
+
+.button:hover {
+    transform: translate(0px, 0px) scale(1);
+    color: white;
+}
+
+.button.effect-2 {
+    transition: all 0.2s linear 0s;
+  }
+
+.button.effect-2:hover:before {
+    content: '\f35a'!important;
+    font-family: "Font Awesome 5 Free";
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 30px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .3);
+    transition: all 0.2s linear 0s;
+    text-align: center;
+}
+
+
+.cursor-pointer {cursor: pointer;}
+
+/* Sidebar Animation */
+
+.sidebar-animate-left 
+{
+    position:relative;
+    animation:animateleft 0.4s
+}@keyframes animateleft
+{
+    from
+    {
+        left:-300px;
+        opacity:0
+    } 
+    to
+    {
+        left:0;
+        opacity:1
+    }
+}
+
+/* Sidebar Close Button */
+
+.fa-window-close {
+    line-height: 0.9!important;
+    background-color: white;
+    border-radius: 0;
+}
+
+.sidebar-sticky {
+    background-color: white;
+    border-right: 1px solid #e8e8e8;
+    top: 0;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: sticky;
+}
+
+
+/* Accordion is for Sidebar Menu Items */
+
+.category-accordion {
+    margin: 0 auto;
+}
+
+.category-accordion .btn {
+  width: 100%;
+  font-weight: bold;
+  color: #004987;
+  padding: 0;
+}
+
+.category-accordion .btn-link:hover,
+.category-accordion .btn-link:focus {
+  text-decoration: none;
+}
+
+.category-accordion li + li {
+  margin-top: 10px;
+}
+
+
+.social-media {
+    padding : 10px;
+}
+
+/* Social Button Color */
+
+.fa-facebook {
+    color: #3b5998;
+}
+
+.fa-twitter {
+    color: #00acee;
+}
+
+.fa-linkedin {
+    color: #0e76a8;
+}
+
+.fa-instagram {
+    color: #3f729b;
+}

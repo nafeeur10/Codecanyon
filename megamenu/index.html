@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+
+  <title>Multipurpose Mega Menu and Sidebar</title>
+
+  <link rel="shortcut icon" type="image/png" href="img/main-logo.png"/>
+
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Flag CSS -->
+  <link href="css/addons/flag.min.css" rel="stylesheet">
+
+  <!-- Select 2 for Dropdown -->
+  <link rel="stylesheet" type="text/css" href="css/select2.min.css">
+
+
+  <!-- Your custom styles (optional) -->
+
+  <!-- General Style for Body Content. So, skip it when you will use this Menu -->
+  <link rel="stylesheet" href="css/custom/style.css">
+
+  <!-- Sidebar Style -->
+  <link rel="stylesheet" href="css/custom/sidebar.css">
+
+  <!-- Top Navbar CSS -->
+  <link rel="stylesheet" href="css/custom/topnavbar.css">
+
+  <!-- Middle Navbar CSS -->
+  <link rel="stylesheet" href="css/custom/middlenavbar.css">
+
+  <!-- Bottom Navbar CSS -->
+  <link rel="stylesheet" href="css/custom/bottomnavbar.css">
+
+  <!-- Custom Media Queries for Responsive Design for all devices -->
+  <link rel="stylesheet" type="text/css" href="css/mediaqueries.css">
+
+</head>
+
+<body>
+
+  <!-- Sidebar Code Start Here -->
+  <div class="category-sidebar sidebar-animate-left" id="CategorySidebarID">
+
+    <!-- Sidebar Close Button -->
+    <i class="fas fa-window-close fa-2x float-right cursor-pointer text-danger" onclick="sidebar_close()" role="button"></i>
+
+
+    <div class="sidebar-sticky mr-3">
+
+      <!-- Name of the Website on Sidebar -->
+      <p class="text-center pt-3 pb-3 mt-0 mb-0">
+        <b><span class="text-success">S</span> 
+          <span class="text-primary">H</span> 
+          <span class="text-danger">O</span> 
+          P I L E
+        </b>
+      </p>
+
+
+      <!-- Categories Accortion Start Here -->
+      <div id="accordion" class="category-accordion">
+        
+        <!-- First Category -->
+        <div id="CategoryOne">
+          <h2 class="mb-0">
+            <button class="d-flex align-items-center justify-content-between btn btn-link collapsed p-3 button" data-toggle="collapse" data-target="#CategoryCollapseOne" aria-expanded="false" aria-controls="CategoryCollapseOne">
+              <img src="img/icons/bag.png" alt="Bag Category" class="img-fluid mr-2">
+              <span>Bag and Shoes</span>
+              <span class="ml-auto">
+                <i class="fas fa-plus fa-inverse text-primary"></i>
+              </span>
+            </button>
+          </h2>
+        </div>
+
+        <!-- First Category Submenu -->
+        <div id="CategoryCollapseOne" class="collapse" aria-labelledby="CategoryOne" data-parent="#accordion">
+          <div class="card-body py-3">
+            <ul>
+              <li><a href="javascript:void(0)">Bag</a></li>
+              <li><a href="javascript:void(0)">School Bag</a></li>
+              <li><a href="javascript:void(0)">Men's Shoes</a></li>
+              <li><a href="javascript:void(0)">Men's Luggage</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Second Category -->
+        <div id="CategoryTwo">
+          <h2 class="mb-0">
+            <button class="d-flex align-items-center justify-content-between btn btn-link collapsed p-3 button" data-toggle="collapse" data-target="#CategoryCollapseTwo" aria-expanded="false" aria-controls="CategoryCollapseTwo">
+              <img src="img/icons/office.png" alt="Machine Learning" class="img-fluid mr-2">
+              <span>Office Equipments</span>
+              <span class="ml-auto">
+                <i class="fas fa-plus fa-inverse text-primary"></i>
+              </span>
+            </button>
+          </h2>
+        </div>
+
+        <!-- Second Category Submenu -->
+        <div id="CategoryCollapseTwo" class="collapse" aria-labelledby="CategoryTwo" data-parent="#accordion">
+          <div class="card-body py-3">
+            <ul>
+              <li><a href="javascript:void(0)">Chair</a></li>
+              <li><a href="javascript:void(0)">Table</a></li>
+              <li><a href="javascript:void(0)">File Holder</a></li>
+              <li><a href="javascript:void(0)">Meeting Table</a></li>
+            </ul>
+          </div>
+        </div>
+
+
+        <!-- Third Category -->
+        <div id="CategoryThree">
+          <h2 class="mb-0">
+            <a class="d-flex align-items-center justify-content-between btn btn-link collapsed p-3 button" href="javascript:void(0)">
+              <img src="img/icons/library.png" alt="Books Category" class="img-fluid mr-2">
+              <span>Books</span>
+              <span class="ml-auto"></span>
+            </a>
+          </h2>
+        </div>
+        
+      </div>
+      <!-- Categories Accortion End Here -->
+      
+
+      <div class="social-media mt-5">
+        <hr>
+        <p class="text-center">
+          <a href="javascript:void(0)"><i class="fab fa-facebook fa-2x mr-2"></i></a>
+          <a href="javascript:void(0)"><i class="fab fa-twitter fa-2x mr-2"></i></a>
+          <a href="javascript:void(0)"><i class="fab fa-linkedin fa-2x mr-2"></i></a>
+          <a href="javascript:void(0)"><i class="fab fa-instagram fa-2x"></i></a>
+        </p>
+        <hr>
+      </div>
+
+      
+      
+    </div>
+  </div>
+  <!-- Sidebar Code End Here -->
+
+  <!-- Modal for Mobile Menu. After clicking Right side menu button it will come -->
+  <!-- Modal Start Here -->
+
+  <div class="modal fade pr-0" id="MobileToggleMenu" tabindex="-1" role="dialog" aria-labelledby="MobileToggleMenuTitle" aria-hidden="true">
+    <div class="modal-dialog mx-auto" role="document" style="max-width: 300px;">
+      <div class="modal-content">
+
+        <!-- Modal Header. -->
+        <div class="modal-header d-flex" style="padding: 0.5rem 1rem;">
+          <!-- Company Name goes here -->
+          <h5 class="modal-title" id="exampleModalLongTitle"><b><span class="text-success">S</span> <span class="text-primary">H</span> <span class="text-danger">O</span> P I L E</b></h5>
+          
+          <!-- Cross button to close Modal -->
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="modal-body py-0">
+
+          <!-- First Layer will be visible after 768px screen. Before that the first layer menu will be in Modal. I control this with this block. -->
+          <div class="d-lg-none d-md-none d-sm-block d-xs-block">
+          
+            <!-- Telephone Number of 1st Layer Navbar-->
+            <div class="nav-item">
+                <a class="nav-link pl-0">
+                    <i class="fas fa-phone-square text-primary mr-2"></i><span>+91 478984</span>
+                </a>
+            </div>
+
+            <hr class="my-0">
+
+            <!-- Skype Username of 1st Layer Navbar -->
+            <div class="nav-item">
+                <a class="nav-link pl-0">
+                    <i class="fab fa-skype text-primary mr-2"></i><span>Skype ID: abc.xyz</span>
+                </a>
+            </div>
+
+            <hr class="my-0">
+
+            <div class="nav-item dropdown">
+
+              <a class="nav-link dropdown-toggle text-success text-decoration-none pl-0 pr-3" data-toggle="dropdown" href="javascrirpt:void(0)" role="button" aria-haspopup="true" aria-expanded="false">
+                <i class="us flag"></i>
+                <span>/ United States /</span>
+                <span>USD</span>
+              </a>
+
+              <div class="dropdown-menu dropdown-menu-transition dropdown-menu-right dropdown-language-div" style="min-width: 280px;">
+                <form class="px-3 pt-3 pb-0">
+                  
+                  <!-- Country Select Option -->
+                  <div class="form-group">
+                      <label for="CountryMobileInModal">Country</label>
+                      <select name="country" id="CountryMobileInModal" style="width: 100%!important;">
+                        <option value="US" selected>USA</option>
+                      </select>
+                  </div>
+
+                  <!-- Currency Select Option -->
+                  <div class="form-group">
+                    <label for="CurrencyMobileInModal">Currency</label>
+                      <select name="currency" id="CurrencyMobileInModal" style="width: 100%!important;">
+                          <option value="USD" selected>USD (United States dollar)</option>
+                        </select>
+                  </div>
+
+                  <div class="form-group">
+                      <button class="btn btn-success form-control shadow-none mt-3">Save</button>
+                  </div>
+                    
+                </form>
+              </div>
+            </div>
+
+            <hr class="my-0">
+          </div>
+
+          <div class="row my-2">
+            <div class="col-5 pr-0 mr-0">
+              <div class="nav-item dropdown dropdown-bubble w-100">
+
+                <a class="nav-link button-shadow text-center" href="javascript:void(0)" id="MoreButtonDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-arrow-alt-circle-down mr-2 text-danger"></i>
+                  <span><b>More</b></span>
+                </a>
+              
+                <div class="dropdown-menu w-100 p-2" aria-labelledby="MoreButtonDropdown" style="min-width: 200px;">
+  
+                  <a class="dropdown-item px-2 mt-1" href="#">
+                    <i class="fas fa-heart text-primary mr-2"></i>
+                    Favorite Items
+                  </a>
+  
+                  <div class="dropdown-divider"></div>
+  
+                  <a class="dropdown-item px-2" href="#">
+                    <i class="fas fa-car text-success mr-2"></i>
+                    Favorite Toys
+                  </a>
+  
+                  <div class="dropdown-divider"></div>
+  
+                  <a class="dropdown-item px-2" href="#">
+                    <i class="fas fa-award mr-2 text-danger"></i>
+                    Awarded Customers
+                  </a>
+  
+                  <div class="dropdown-divider"></div>
+  
+                  <a class="dropdown-item px-2" href="#">
+                    <i class="fas fa-chess mr-2 text-warning"></i>
+                    Sports Items
+                  </a>
+  
+                </div>
+              </div>
+            </div>
+            <div class="col-7">
+              <div class="nav nav-pills btn p-0">
+                <div class="nav-item dropdown w-100">
+  
+                  <a class="nav-link dropdown-toggle nav-pills-link pr-3 button-shadow rounded-0" href="javascript:void(0)" id="AccountDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="img/icons/user1.png" alt="User Icon" class="img-fluid">
+                    <b>Account</b>
+                  </a>
+  
+                  <div class="dropdown-menu dropdown-menu-right dropdown-nav-pills w-100 rounded-0" aria-labelledby="AccountDropdown">
+  
+                    <a class="dropdown-item" href="#">
+                      <i class="fas fa-user text-primary mr-2"></i>
+                      Login
+                    </a>
+                    <div class="dropdown-divider"></div>
+  
+                    <a class="dropdown-item" href="#">
+                      <i class="fas fa-user-plus text-success mr-2"></i>
+                      Sign Up
+                    </a>
+                    <div class="dropdown-divider"></div>
+  
+                    <a class="dropdown-item" href="#">
+                      <i class="fas fa-heart mr-2 text-danger"></i>
+                      Favorite Items
+                    </a>
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal End Here -->
+
+  <!-- Top Navbar Start Here -->
+
+  <div class="d-none d-lg-block d-md-block" id="TopNavbar">
+    <div class="d-flex bacground_color_of_top_nav">
+
+      <!-- Left Part of Top Navbar -->
+      <div class="mr-auto">
+
+          <ul class="nav nav-pills">
+
+              <!-- Telephone Number -->
+              <li class="nav-item">
+                  <a class="nav-link">
+                      <i class="fas fa-phone-square text-primary mr-2"></i><span>+91 478984</span>
+                  </a>
+              </li>
+
+              <!-- Skype Username -->
+              <li class="nav-item">
+                  <a class="nav-link">
+                      <i class="fab fa-skype text-primary mr-2"></i><span>Skype ID: abc.xyz</span>
+                  </a>
+              </li>
+          </ul>
+
+      </div>
+
+      <!-- Right Part of Top Navbar -->
+      <div>
+        <!-- Language and Currency Dropdown -->
+        <div class="d-inline-block mr-3">
+
+            <nav class="nav nav-pills">
+                <div class="nav-item dropdown d-none d-lg-block d-md-block">
+
+                  <a class="nav-link dropdown-toggle text-success text-decoration-none pl-3 pr-3" data-toggle="dropdown" href="javascrirpt:void(0)" role="button" aria-haspopup="true" aria-expanded="false">
+                    <i class="us flag"></i>
+                    <span>/ United States /</span>
+                    <span>USD</span>
+                  </a>
+
+                  <div class="dropdown-menu dropdown-menu-transition dropdown-menu-right dropdown-language-div" style="min-width: 280px;">
+                    <form class="px-3 pt-3 pb-0">
+                      
+                      <!-- Country selection Select Option -->
+                      <div class="form-group">
+                          <label for="country">Country</label>
+                          <select name="country" id="country" style="width: 100%!important;">
+                            <option value="US" selected>USA</option>
+                          </select>
+                      </div>
+                      
+                      <!-- Currency selection Select Option -->
+                      <div class="form-group">
+                        <label for="currency">Currency</label>
+                          <select name="currency" id="currency" style="width: 100%!important;">
+                              <option value="USD" selected>USD (United States dollar)</option>
+                            </select>
+                      </div>
+
+                        
+                      <div class="form-group">
+                          <button class="btn btn-success form-control shadow-none mt-3">Save</button>
+                      </div>
+                        
+                    </form>
+                    
+                  </div>
+                </div>
+            </nav>
+
+
+        </div>
+
+        <!-- Help button -->
+        <div class="d-inline-block mr-3 helpbtn">
+            <a href="javascript:void(0)" class="text-decoration-none">
+              <i class="fas fa-question-circle mr-2 text-danger"></i><span>Help</span>
+            </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Navbar End Here -->
+
+
+  <!-- Middle Navbar Start Here -->
+
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top" id="MiddleNavbar">
+
+      <a class="navbar-brand" href="javascript:void(0)">
+        <i class="fas fa-th-list mr-lg-3 mr-xl-3 mr-0" onclick="sidebar_open()"></i>
+        <b class="d-none d-lg-inline-block"><span class="text-success">S</span> <span class="text-primary">H</span> <span class="text-danger">O</span> P I L E</b>
+      </a>
+
+      <!-- Shopping Bag: Visible on Mobile, Tablet -->
+      <div class="d-lg-none fixed-bottom text-right">
+        <a href="javascript:void(0)">
+          <i class="fas fa-shopping-cart cart-design fa-1-5x text-white bg-dark p-3">
+          <sup><span>4</span></sup></i>
+        </a>
+      </div>
+
+    
+      <!-- Searchbar only for Small Screen -->
+
+      <div class="d-lg-none w-75">
+        <form class="form-inline px-0 my-2 my-md-0 col-12 w-100">
+          <div class="input-group-append w-100">
+            <input class="form-control w-100 rounded-0 search-input shadow-none" type="text" placeholder="Search">
+            <span class="input-group-text search-span-color rounded-0" id="basic-text1">
+              <i class="fas fa-search text-grey" aria-hidden="true"></i>
+            </span>
+          </div>
+        </form>
+      </div>
+        
+      <!-- Button to expand Navbar in Mobile Phone -->
+      <!-- Button trigger modal -->
+      <i class="fas fa-ellipsis-v navbar-toggler cursor-pointer" role="button" data-toggle="modal" data-target="#MobileToggleMenu"></i>
+    
+
+
+      <div class="collapse navbar-collapse" id="collapsibleNavbarMain">
+
+        <!-- Search Form for Larger Screen -->
+        <div class="d-lg-block d-none w-50">
+          <form class="form-inline px-0 my-2 my-md-0 col-12 w-100">
+            <div class="input-group-append w-100">
+              <input class="form-control w-100 rounded-0 shadow-none" type="text" placeholder="Search">
+              <span class="input-group-text search-span-color rounded-0">
+                <i class="fas fa-search text-grey" aria-hidden="true"></i>
+              </span>
+            </div>
+          </form>
+        </div>
+        
+        <!-- Shopping Bag for Larger Screen -->
+
+        <div class="mx-auto d-none d-lg-block">
+          <a href="javascript:void(0)" class="text-decoration-none">
+            <i class="fas fa-shopping-cart fa-1-3x" style="color: #009688;"></i>
+            <span class="badge badge-danger">4</span>
+          </a>
+        </div>
+
+        <!-- More and Account Button -->
+        <div class="row nav-button-right">
+          <div class="col-6 col-md-6 col-sm-6 col-xs-6">
+            <div class="dropdown dropdown-bubble w-100">
+
+              <a class="nav-link button-shadow text-center" href="javascript:void(0)" id="MoreButtonDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-arrow-alt-circle-down mr-2 text-danger"></i>
+                <span><b>More</b></span>
+              </a>
+            
+              <div class="dropdown-menu" aria-labelledby="MoreButtonDropdown">
+
+                <a class="dropdown-item px-2 mt-1" href="#">
+                  <i class="fas fa-heart text-primary mr-2"></i>
+                  Favorite Items
+                </a>
+
+                <div class="dropdown-divider"></div>
+
+                <a class="dropdown-item px-2" href="#">
+                  <i class="fas fa-car text-success mr-2"></i>
+                  Favorite Toys
+                </a>
+
+                <div class="dropdown-divider"></div>
+
+                <a class="dropdown-item px-2" href="#">
+                  <i class="fas fa-award mr-2 text-danger"></i>
+                  Awarded Customers
+                </a>
+
+                <div class="dropdown-divider"></div>
+
+                <a class="dropdown-item px-2" href="#">
+                  <i class="fas fa-chess mr-2 text-warning"></i>
+                  Sports Items
+                </a>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-6 col-sm-6 col-xs-6">
+
+            <div class="nav nav-pills btn p-0">
+              <div class="nav-item dropdown w-100">
+
+                <a class="nav-link dropdown-toggle nav-pills-link pr-3 button-shadow rounded-0" href="javascript:void(0)" id="AccountDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <img src="img/icons/user1.png" alt="User Icon" class="img-fluid">
+                  <b>Account</b>
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-right dropdown-nav-pills" aria-labelledby="AccountDropdown">
+
+                  <a class="dropdown-item" href="#">
+                    <i class="fas fa-user text-primary mr-2"></i>
+                    Login
+                  </a>
+                  <div class="dropdown-divider"></div>
+
+                  <a class="dropdown-item" href="#">
+                    <i class="fas fa-user-plus text-success mr-2"></i>
+                    Sign Up
+                  </a>
+                  <div class="dropdown-divider"></div>
+
+                  <a class="dropdown-item" href="#">
+                    <i class="fas fa-heart mr-2 text-danger"></i>
+                    Favorite Items
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+  
+      </div>
+  </nav>
+
+  <!-- Middle Navbar End Here -->
+
+
+
+  <!-- Bottom Navbar Start Here -->
+
+  <nav class="navbar py-0 px-1" id="BottomNavbar">
+    <div class="d-flex justify-content-lg-around navbar-icon-top w-100">
+
+
+      <div class="nav-item">
+          
+        <!-- Electronics Nav item -->
+        <a class="nav-link dropdown-toggle" id="electronicsID" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img src="img/icons/electronics.png" alt="Electronics">
+          <span>Electronics</span>
+        </a>
+
+        <!-- Electronics Sub Menu -->
+        <ul class="dropdown-menu w-100 shadow p-0 my-0" id="electronicsDiv">
+          <li class="dropdown-item dropdown-mega-menu">
+            <div class="row py-3">
+
+              <div class="col-md-6 col-12 col-lg-3 col-xs-12 col-sm-6 text-center mb-2 mb-sm-2 mb-md-2 mb-lg-0">
+                
+                <div class="card card-cascade">
+                  <h5>Best Selling</h5>
+                  <div class="text-center mt-4">
+                    <div class="row">
+                      <div class="col-md-6 col-6">
+                        <a href="javascript:void(0)" class="text-decoration-none">
+                          <i class="fas fa-tv fa-3x"></i>
+                          <p class="display-6 mt-3">LG TV</p>
+                        </a>
+                      </div>
+                      <div class="col-md-6 col-6">
+                        <a href="javascript:void(0)" class="text-decoration-none">
+                          <i class="fas fa-mobile-alt fa-3x"></i>
+                          <p class="display-6 mt-3">iPhone</p>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6 col-6">
+                        <a href="javascript:void(0)" class="text-decoration-none">
+                          <i class="fas fa-laptop fa-3x"></i>
+                          <p class="display-6 mt-3">Laptops</p>
+                        </a>
+                      </div>
+                      <div class="col-md-6 col-6">
+                        <a href="javascript:void(0)" class="text-decoration-none">
+                          <i class="fas fa-desktop fa-3x"></i>
+                          <p class="display-6 mt-3">Monitors</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="col-md-6 col-12 col-lg-3 col-xs-12 col-sm-6 mb-2 mb-sm-2 mb-md-2 mb-lg-0">
+                  <div class="card card-bg-info rounded-lg h-100">
+                    <div class="card-header">
+                      <h4 class="mb-0 text-truncated text-center">New Collections</h4>
+                    </div>
+                    <div class="card-body px-1" id="newCollection">
+                      <div class="row">
+                        <div class="col-6 col-lg-6 col-md-6">
+                            <ul>
+                              <li><a href="javascript:void(0)">MI</a></li>
+                              <li><a href="javascript:void(0)">OPPO</a></li>
+                              <li><a href="javascript:void(0)">VIVO</a></li>
+                              <li><a href="javascript:void(0)">Apple</a></li>
+                              <li><a href="javascript:void(0)">Samsung</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-lg-6 col-md-6 ml-0 pl-0">
+                          <ul>
+                            <li><a href="javascript:void(0)">MI</a></li>
+                            <li><a href="javascript:void(0)">OPPO</a></li>
+                            <li><a href="javascript:void(0)">VIVO</a></li>
+                            <li><a href="javascript:void(0)">Apple</a></li>
+                            <li><a href="javascript:void(0)">Samsung</a></li>
+                          </ul>
+                      </div>
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <div class="row">
+                        <div class="col-12 col-lg-12">
+                            <button class="btn btn-block btn-outline-success btn-sm"><span class="fa fa-clipboard-list mr-2"></span> See All Collections</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="col-md-6 col-12 col-lg-3 col-xs-12 col-sm-6 mb-2 mb-sm-2 mb-md-2 mb-lg-0">
+                <div class="card rounded-lg h-100">
+                  <div class="fall-item fall-effect">
+                      <img src="img/iphone.jpeg" class="img-fluid" alt="Best product of the Month" />
+                      <div class="mask">
+                          <h2>iPhone X Pro</h2>
+                          <a href="javascript:void(0)" class="btn btn-info align-bottom mt-5">Read More</a>
+                      </div>
+                  </div>
+                  <h5 class="text-center my-auto py-2 py-sm-2 py-md-0">Best Product of Month</h5>
+                </div>
+              </div>
+                
+              <div class="col-md-6 col-12 col-lg-3 col-xs-12 col-sm-6 mb-2 mb-sm-2 mb-md-2 mb-lg-0">
+                  <div class="card rounded-lg h-100">
+                      <div class="card-body">
+                        <h6 class="text-center">Other Links</h6>
+                        <hr>
+                        <div class="row mt-4">
+                          <div class="col-6">
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="text-info">Other Link</a></li>
+                                <li><a href="#" class="text-info">Other Link</a></li>
+                                <li><a href="#" class="text-info">Other Link</a></li>
+                                <li><a href="#" class="text-info">Other Link</a></li>
+                                <li><a href="#" class="text-info">Other Link</a></li>
+                            </ul>
+                          </div>
+                          <div class="col-6">
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="text-info">Other Link</a></li>
+                                <li><a href="#" class="text-info">Other Link</a></li>
+                                <li><a href="#" class="text-info">Other Link</a></li>
+                                <li><a href="#" class="text-info">Other Link</a></li>
+                                <li><a href="#" class="text-info">Other Link</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+
+      <div class="nav-item">
+
+        <!-- Men Nav item -->
+        <a class="nav-link dropdown-toggle" id="menID" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img src="img/icons/man.png" alt="Men Items">
+          <span>Men</span>
+        </a>
+
+        <!-- Men Sub Menu -->
+        <div class="dropdown dropdown-bubble">
+          <div class="dropdown-menu" id="menDiv">
+
+            <div class="d-flex justify-content-around">
+              <div class="dropdown-custom-menu2"> 
+                <p class="text-center my-2">Clothing</p>
+                <hr>
+  
+                <a class="dropdown-item px-2 mt-1" href="#">
+                  <i class="fas fa-tshirt text-primary mr-2"></i>
+                  <span>T-Shirts <sup><span class="badge badge-primary">Hot</span></sup></span>
+                </a>
+      
+                <div class="dropdown-divider"></div>
+      
+                <a class="dropdown-item px-2" href="#">
+                  <i class="fas fa-coffee text-success mr-2"></i>
+                  Kurtas
+                </a>
+      
+                <div class="dropdown-divider"></div>
+      
+                <a class="dropdown-item px-2" href="#">
+                  <i class="fas fa-stopwatch mr-2 text-danger"></i>
+                  Smart Watch
+                </a>
+      
+                <div class="dropdown-divider"></div>
+      
+                <a class="dropdown-item px-2" href="#">
+                  <i class="fas fa-leaf mr-2 text-warning"></i>
+                  Fabrics
+                </a>
+              </div>
+              
+              <div class="dropdown-custom-menu2">
+                <p class="text-center my-2">Footwear</p>
+                <hr>
+                <a class="dropdown-item px-2 mt-1" href="#">
+                  <i class="fas fa-football-ball text-primary mr-2"></i>
+                  Sports Shoes
+                </a>
+      
+                <div class="dropdown-divider"></div>
+      
+                <a class="dropdown-item px-2" href="#">
+                  <i class="fas fa-socks text-success mr-2"></i>
+                  Casual Shoes
+                </a>
+      
+                <div class="dropdown-divider"></div>
+      
+                <a class="dropdown-item px-2" href="#">
+                  <i class="fas fa-walking mr-2 text-danger"></i>
+                  Loafers
+                </a>
+      
+                <div class="dropdown-divider"></div>
+      
+                <a class="dropdown-item px-2" href="#">
+                  <i class="fas fa-shoe-prints mr-2 text-warning"></i>
+                  Running Shoes
+                </a>
+              </div>
+            </div>
+  
+          </div>
+        </div>
+        
+      </div>
+
+
+      <div class="nav-item">
+
+        <!-- Baby & Kids Nav Item -->
+        <a class="nav-link text-nowrap" href="javascript:void(0)">
+          <img src="img/icons/baby.png" alt="Baby and Kids Icon"> 
+          <span>Baby & Kids</span>
+        </a>
+
+      </div>
+
+
+      <div class="nav-item">
+    
+        <!-- Home & Furniture Nav Item s-->
+        <a class="nav-link text-nowrap" href="#">
+          <img src="img/icons/home.png" alt="Home and Furniture Icon"> 
+          <span>Home & Furniture <sup><span class="badge badge-danger">New</span></sup></span>
+        </a>
+
+      </div>
+
+
+      <div class="nav-item">
+
+        <!-- Latest Offer Nav Item -->
+        <a class="nav-link text-nowrap" href="#">
+          <img src="img/icons/offer.png" alt="Latest Offer Icon"> 
+          <span>Latest Offer <sup><span class="badge badge-success">Hot</span></sup></span>
+        </a>
+
+      </div>
+
+
+      <div class="nav-item">
+
+        <!-- Others Nav Item -->
+        <a class="nav-link dropdown-toggle" id="othersID" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img src="img/icons/extra.png" alt="Others Icon"> 
+          <span>Others</span>
+        </a>
+
+
+        <!-- Others Nav Item Sub Menu -->
+        <ul class="dropdown-menu w-100 shadow p-0 my-0" id="OthersDivID">
+          <li class="dropdown-item dropdown-mega-menu">
+              <div class="row py-3">
+                  <div class="col-md-6 col-12 col-lg-3 col-xs-12 col-sm-6 pb-2">
+                      <div class="card h-100">
+                        <div class="card-header">
+                          <h4 class="mb-0 text-truncated text-center">Our Social Outlets</h4>
+                        </div>
+                        <div class="card-body">
+                          <a href="#">
+                              <img src="img/outlet.png" class="img-fluid mx-auto d-block" alt="Social Outlet Icon">
+                          </a>
+                        </div>
+                          
+                          <div class="card-footer d-flex justify-content-center bg-white">
+                            <div>
+                              <div class="text-center"> 
+                                <a href="javascript:void(0)" class="btn btn-social-icon btn-outline-facebook"><i class="fab fa-facebook"></i></a> 
+                                <a href="javascript:void(0)" class="btn btn-social-icon btn-outline-youtube"><i class="fab fa-youtube"></i></a> 
+                                <a href="javascript:void(0)" class="btn btn-social-icon btn-outline-twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="javascript:void(0)" class="btn btn-social-icon btn-outline-linkedin"><i class="fab fa-linkedin"></i></a> 
+                                <a href="javascript:void(0)" class="btn btn-social-icon btn-outline-instagram"><i class="fab fa-instagram"></i></a> 
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-6 col-12 col-lg-3 col-xs-12 col-sm-6 pb-2">
+                      <div class="card rounded-lg h-100">
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-12 col-lg-12 col-md-12 text-center">
+                                <img src="img/user.png" alt="Profile" class="mx-auto rounded-circle img-fluid bg-light">
+                            </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-12 col-lg-12 col-md-12">
+                                  <h3 class="mb-0 text-truncated text-center">Peter Mircish</h3>
+                                  <p class="lead text-center">Our Manager</p>
+                                  
+                                  <p class="text-center"> 
+                                    <span class="badge badge-success tags">Management</span> 
+                                    <span class="badge badge-info tags">MS Office</span>
+                                    <span class="badge badge-warning tags">Fixing</span>
+                                  </p>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="card-footer">
+                          <div class="row">
+                            <div class="col-12 col-lg-6 px-1 mb-2 mb-md-2 mb-lg-0">
+                                <button class="btn btn-block btn-success btn-sm"><span class="fa fa-plus-circle"></span> Contact Him</button>
+                            </div>
+                            <div class="col-12 col-lg-6 px-1">
+                                <button class="btn btn-info btn-block btn-sm"><span class="fa fa-user"></span> View Profile</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col-md-6 col-12 col-lg-3 col-xs-12 col-sm-6 pb-2 text-center mt-2 mt-md-0">
+                      <form>
+                        <div class="card card-cascade">
+                          <h5>Contact Us</h5>
+                          <div class="position-relative form-group">
+                              <input name="name" id="name" placeholder="Enter Name Here" type="text" class="form-control shadow-none">
+                          </div>
+                          <div class="position-relative form-group">
+                              <input name="email" id="email" placeholder="Enter Email Here" type="email" class="form-control shadow-none">
+                          </div>
+                          <div class="position-relative form-group">
+                              <textarea name="text" id="message" placeholder="Message" class="form-control shadow-none"></textarea>
+                          </div>
+                          <button class="btn btn-primary float-right">Submit</button>
+                        </div>
+                      </form>
+                  </div>
+                  <div class="col-md-6 col-12 col-lg-3 col-xs-12 col-sm-6 pb-2">
+                      <div class="card rounded-lg h-100">
+                          <div class="card-body">
+                            <h6 class="text-center">Important Links</h6>
+                            <hr>
+                            <div class="row mt-4">
+                              <div class="col-6">
+                                <ul class="list-unstyled">
+                                    <li><a href="#" class="text-info">Other Link</a></li>
+                                    <li><a href="#" class="text-info">Other Link</a></li>
+                                    <li><a href="#" class="text-info">Other Link</a></li>
+                                    <li><a href="#" class="text-info">Other Link</a></li>
+                                    <li><a href="#" class="text-info">Other Link</a></li>
+                                </ul>
+                              </div>
+                              <div class="col-6">
+                                <ul class="list-unstyled">
+                                    <li><a href="#" class="text-info">Other Link</a></li>
+                                    <li><a href="#" class="text-info">Other Link</a></li>
+                                    <li><a href="#" class="text-info">Other Link</a></li>
+                                    <li><a href="#" class="text-info">Other Link</a></li>
+                                    <li><a href="#" class="text-info">Other Link</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Bottom Navbar End Here -->
+
+
+
+  <!-- Body Content -->
+  <div class="container">
+
+    <div class="row px-3">
+      <h1 class="text-center text-white display-3 display-sm-3 mt-5 mb-5 w-100">Multi-Purpose Mega Menu</h1>
+      <hr class="hr">
+
+      <div class="row my-5">
+        <div class="col-md-6">
+          <h3 class="text-left text-white my-5">
+            Basically, It looks like E-commerce Navbar and Sidebar. But You can also use it in various purpose. <i class="fas fa-smile-wink"></i>
+            <br><br>
+            Technology: Bootstrap 4, jQuery, CSS3
+          </h3>
+        </div>
+
+        <div class="col-md-6">
+          <img src="img/burger.png" alt="" class="img-fluid mx-auto float-right" style="width: 250px;">
+        </div>
+      </div>
+      
+      
+      <h3 class="d-block w-100 display-3 text-center text-white my-5 display-sm-3">Basic Features</h3>
+      <hr class="hr">
+
+      <div class="row my-5 mx-0 w-100">
+        <div class="col-md-4 my-3">
+          <div class="card border-warning">
+            <div class="card-body text-center">
+               Fully Responsive with <b></b>Bootstrap 4
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 my-3">
+          <div class="card border-success">
+            <div class="card-body text-center">
+               Scrollable Menu for Mobile Only
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 my-3">
+          <div class="card border-info">
+            <div class="card-body text-center">
+              Stylish Contact Form
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 my-3">
+          <div class="card border-warning">
+            <div class="card-body text-center">
+               Searchable Language & Currency Form
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 my-3">
+          <div class="card border-success">
+            <div class="card-body text-center">
+               Flexible Searchbar
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 my-3">
+          <div class="card border-info">
+            <div class="card-body text-center">
+              Sticky Mega Menu and Fixed Sidebar
+            </div>
+          </div>
+        </div>
+      </div>  
+
+
+      <h3 class="d-block w-100 display-3 text-center text-white my-5 display-sm-3">Exclusive Styles</h3>
+      <hr class="hr">
+
+      <div class="row my-5 mx-0 w-100">
+        <div class="container py-2 mt-4 mb-4">
+          <!-- timeline item 1 -->
+          <div class="row no-gutters">
+            <div class="col-sm"> <!--spacer--> </div>
+            <!-- timeline item 1 center dot -->
+            <div class="col-sm-1 text-center flex-column d-none d-sm-flex">
+              <div class="row h-50">
+                <div class="col">&nbsp;</div>
+                <div class="col">&nbsp;</div>
+              </div>
+              <h5 class="m-2">
+                <span class="badge badge-pill bg-warning border">&nbsp;</span>
+              </h5>
+              <div class="row h-50">
+                <div class="col border-right">&nbsp;</div>
+                <div class="col">&nbsp;</div>
+              </div>
+            </div>
+            <!-- timeline item 1 event content -->
+            <div class="col-sm py-2">
+              <div class="card bg-white">
+                <div class="card-header bg-warning text-center text-white">
+                  Account Menu Style
+                </div>
+                <div class="card-body">
+                  <img src="img/homepage/style1.jpg" alt="Account" class="img-fluid mx-auto d-block">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--/row-->
+          <!-- timeline item 2 -->
+          <div class="row no-gutters">
+            <div class="col-sm py-2">
+              <div class="card bg-white">
+                <div class="card-header bg-info text-center text-white">
+                  Searchable Language Form
+                </div>
+                <div class="card-body">
+                  <img src="img/homepage/style2.jpg" alt="Language" class="img-fluid mx-auto d-block">
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-1 text-center flex-column d-none d-sm-flex">
+              <div class="row h-50">
+                <div class="col border-right">&nbsp;</div>
+                <div class="col">&nbsp;</div>
+              </div>
+              <h5 class="m-2">
+                <span class="badge badge-pill bg-info">&nbsp;</span>
+              </h5>
+              <div class="row h-50">
+                <div class="col border-right">&nbsp;</div>
+                <div class="col">&nbsp;</div>
+              </div>
+            </div>
+            <div class="col-sm"> <!--spacer--> </div>
+          </div>
+          <!--/row-->
+          <!-- timeline item 3 -->
+          <div class="row no-gutters">
+            <div class="col-sm"> <!--spacer--> </div>
+            <div class="col-sm-1 text-center flex-column d-none d-sm-flex">
+              <div class="row h-50">
+                <div class="col border-right">&nbsp;</div>
+                <div class="col">&nbsp;</div>
+              </div>
+              <h5 class="m-2">
+                <span class="badge badge-pill bg-success border">&nbsp;</span>
+              </h5>
+              <div class="row h-50">
+                <div class="col border-right">&nbsp;</div>
+                <div class="col">&nbsp;</div>
+              </div>
+            </div>
+            <div class="col-sm py-2">
+              <div class="card bg-white">
+                <div class="card-header bg-success text-center text-white">
+                  Exclusive Sidebar
+                </div>
+                <div class="card-body">
+                  <img src="img/homepage/style3.jpg" alt="Language" class="img-fluid mx-auto d-block">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--/row-->
+          <!-- timeline item 4 -->
+          <div class="row no-gutters">
+            <div class="col-sm py-2">
+              <div class="card bg-white">
+                <div class="card-header bg-primary text-center text-white">
+                  Mega Menu
+                </div>
+                <div class="card-body">
+                  <img src="img/homepage/style4.jpg" alt="Language" class="img-fluid mx-auto d-block">
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-1 text-center flex-column d-none d-sm-flex">
+              <div class="row h-50">
+                <div class="col border-right">&nbsp;</div>
+                <div class="col">&nbsp;</div>
+              </div>
+              <h5 class="m-2">
+                <span class="badge badge-pill bg-primary border">&nbsp;</span>
+              </h5>
+              <div class="row h-50">
+                <div class="col">&nbsp;</div>
+                <div class="col">&nbsp;</div>
+              </div>
+            </div>
+            <div class="col-sm"> <!--spacer--> </div>
+          </div>
+          <div class="row no-gutters">
+            <div class="col-sm"> <!--spacer--> </div>
+            <div class="col-sm-1 text-center flex-column d-none d-sm-flex">
+              <div class="row h-50">
+                <div class="col border-right">&nbsp;</div>
+                <div class="col">&nbsp;</div>
+              </div>
+              <h5 class="m-2">
+                <span class="badge badge-pill bg-danger border">&nbsp;</span>
+              </h5>
+              <div class="row h-50">
+                <div class="col border-right">&nbsp;</div>
+                <div class="col">&nbsp;</div>
+              </div>
+            </div>
+            <div class="col-sm py-2">
+              <div class="card bg-white">
+                <div class="card-header bg-danger text-center text-white">
+                  Exclusive Two Part Menu with Icons
+                </div>
+                <div class="card-body">
+                  <img src="img/homepage/style5.jpg" alt="Language" class="img-fluid mx-auto d-block">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters">
+            <div class="col-sm py-2">
+              <div class="card bg-white">
+                <div class="card-header bg-dark text-center text-white">
+                  Mobile Version
+                </div>
+                <div class="card-body">
+                  <img src="img/homepage/style6.jpg" alt="Language" class="img-fluid mx-auto d-block">
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-1 text-center flex-column d-none d-sm-flex">
+              <div class="row h-50">
+                <div class="col border-right">&nbsp;</div>
+                <div class="col">&nbsp;</div>
+              </div>
+              <h5 class="m-2">
+                <span class="badge badge-pill bg-dark border">&nbsp;</span>
+              </h5>
+              <div class="row h-50">
+                <div class="col">&nbsp;</div>
+                <div class="col">&nbsp;</div>
+              </div>
+            </div>
+            <div class="col-sm"> <!--spacer--> </div>
+          </div>
+          <!--/row-->
+        </div>
+      </div>
+
+      <h3 class="d-block w-100 display-3 text-center text-white my-5 display-sm-3">Upcoming Features</h3>
+      <hr class="hr">
+
+      <div class="row my-5 mx-0 w-100">
+        <div class="col-md-4 my-3">
+          <div class="card border-warning">
+            <div class="card-body text-center">
+                More Exclusive Sidebar
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 my-3">
+          <div class="card border-success">
+            <div class="card-body text-center">
+               Sticky Category for Mobile in Footer
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 my-3">
+          <div class="card border-info">
+            <div class="card-body text-center">
+              Exclusive Animations
+            </div>
+          </div>
+        </div>
+      </div>  
+    </div>
+
+  </div>
+
+  <footer>
+    Copyright ©2020 <a href="http://www.aspile.com">Aspile Inc.</a> All Rights Reserved
+  </footer>
+
+  
+ <!-- JQuery -->
+ <script src="js/jquery-3.4.1.min.js"></script>
+
+ <!-- Bootstrap tooltips -->
+ <script src="js/popper.min.js"></script>
+
+ <!-- Bootstrap core JavaScript -->
+ <script src="js/bootstrap.min.js"></script>
+
+ <!-- Select 2 Javascript Link -->
+ <script src="js/select2.min.js"></script>
+
+<!-- Custom jQuery + Javascript File -->
+ <script src="js/custom.js"></script>
+
+</body>

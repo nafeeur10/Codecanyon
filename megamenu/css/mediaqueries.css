@@ -1,0 +1,117 @@
+/* Media Queries for Responsiveness */
+
+
+/* Cart for Mobile and Tablet */
+.cart-design {
+  border-top-left-radius: 50%;
+  border-top-right-radius: 0%;
+  background-color: #28a745!important;
+  border: 1px solid;
+  border-right: none;
+  border-bottom: none;
+}
+
+
+@media (min-width: 576px) and (max-width: 991px) {
+  .navbar-toggler {
+      padding: unset;
+      border: unset;
+  }
+
+  .nav-button-right {
+      margin-top: 10px;
+  }
+
+  .navbar-icon-top .nav-item .nav-link {
+      text-align: center;
+  }
+
+  .navbar-icon-top {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      overflow-x: scroll;
+      scrollbar-width: none;
+  }
+
+  .navbar-icon-top::-webkit-scrollbar { 
+      display: none;  /* Safari and Chrome */
+  }
+  
+  .navbar-icon-top.navbar-expand-sm .navbar-nav .nav-link > .fa > .badge {
+    top: -7px;
+  }
+
+  .dropdown-bubble .dropdown-menu {
+    left: 1%!important;
+  }
+
+  .dropdown-bubble #menDiv {
+    transform: unset!important;
+  }
+}
+
+@media (max-width: 991px) {
+  .dropdown-bubble {
+    position: inherit;
+  }
+
+  .navbar-icon-top ul {
+    flex-direction: row;
+  }
+
+  .navbar-icon-top { 
+      -ms-overflow-style: none;  /* Internet Explorer 10+ */
+      scrollbar-width: none;  /* Firefox */
+      overflow-x: scroll;
+      scrollbar-width: none;
+  }
+
+  .navbar-icon-top::-webkit-scrollbar { 
+      display: none;  /* Safari and Chrome */
+  }
+
+  .navbar-icon-top .navbar-nav .nav-link {
+      padding-right: .5rem;
+      padding-left: .5rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .navbar-toggler {
+      padding: unset; 
+      font-size: 1.4rem;
+      line-height: unset; 
+      background-color: unset; 
+      border: 0px solid transparent; 
+      border-radius: unset;
+  }
+  .dropdown-bubble .dropdown-menu {
+    left: 5%;
+    transform: unset;
+    padding: 0;
+  }
+
+  #MiddleNavbar {
+      border-bottom: 1px solid #e8e8e8;
+      border-top: unset!important;
+  }
+
+  .navbar-icon-top { 
+      -ms-overflow-style: none;  /* Internet Explorer 10+ */
+      scrollbar-width: none;  /* Firefox */
+      overflow-x: scroll;
+      scrollbar-width: none;
+  }
+
+  .navbar-icon-top::-webkit-scrollbar { 
+      display: none;  /* Safari and Chrome */
+  }
+
+  .navbar-icon-top .navbar-nav .nav-link {
+      padding-right: .5rem;
+      padding-left: .5rem;
+  }
+  
+}
